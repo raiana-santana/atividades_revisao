@@ -36,9 +36,9 @@ for i in range(numero_de_pares_chave_valor):
     valor = input("Digite o valor: ")
 
     if chave not in dicionario:
-        print(f"Atualizando o valor da chave {chave} para {valor}")
+        print(f"Adicionando o valor da chave {chave} para {valor}")
     else:
-        print(f"Adicionando a chave {chave} com o valor {valor}")
+        print(f"Atualizando a chave {chave} com o valor {valor}")
 
     dicionario[chave] = valor 
 
