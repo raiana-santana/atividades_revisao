@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 03</title>
+</head>
+<body>
+    <h2>Atividade 03</h2>
+    <p>Peça ao usuário para inserir o preço de um produto e sua idade. E calcule o
+        preço final com desconto, Se o usuário tiver menos de 18 anos, aplique um
+        desconto de 10%. Se o usuário tiver 18 anos ou mais, não aplique desconto.</p>
+
+    <div class="container">
+        <label for="produtoUsuario">Digite o valor do seu produto: </label>
+        <input type="number" id="produtoUsuario">
+
+        <label for="idadeUsuario">Digite a sua idade: </label>
+        <input type="number" id="idadeUsuario">
+
+        <p id="mensagem"></p>
+        <button id="botaoDesconto">Calcular desconto</button>
+    </div>
+
+    <script>
+        const botao = document.getElementById('botaoDesconto')
+
+        botao.addEventListener('click', function(){
+            const produto = parseFloat(document.getElementById('produtoUsuario').value);
+            const idade = parseInt(document.getElementById('idadeUsuario').value);
+            const msg = document.getElementById('mensagem')
+
+            if (idade < 18){
+                let precoDesconto = produto * 0.90
+                msg.textContent = `Você é menor de 18 anos e recebeu nosso desconto de 10%. Valor final da compra: R$${precoDesconto}`
+            }else{
+                msg.textContent = `Você é maior de 18 anos, portanto, não recebe desconto. Preço final R$${produto}`
+            }
+
+        })
+    </script>
+</body>
+</html>

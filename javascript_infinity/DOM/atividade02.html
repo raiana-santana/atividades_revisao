@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="">
+        <label for="falatu">Escreve ai teu nome</label>
+        <input type="text" name="falatu">
+        <button type="button" onclick="showValue()">CLICA AI MALUCO</button>
+    </form>
+
+    <p id="paragrafo"></p>
+
+
+    <script>
+        
+        function showValue(){
+            let valor = document.getElementsByName('falatu')[0].value 
+            let paragrafo = document.querySelector('#paragrafo')
+
+            paragrafo.innerText = valor
+            
+        }
+
+
+    </script>
+</body>
+</html>

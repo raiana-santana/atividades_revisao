@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Faça um programa que leia 20 números inteiros e armazene-os em
+um vetor. Armazene os números pares no vetor 'PAR' e os números ímpares no vetor 'ímpar'. Imprima os três vetores.</p>
+
+    <script>
+        const numeros = []
+        const pares = []
+        const impares = []
+
+        for (let i = 0; i < 20; i++){
+            const num = Math.floor(Math.random() * 100) + 1
+            numeros.push(num)
+            
+            if (num % 2 === 0){
+                pares.push(num)
+            }else {
+                impares.push(num)
+            }
+        }
+
+        console.log(`Números ${numeros}`);
+        console.log(`Pares ${pares}`)
+        console.log(`Ímpares ${impares}`);
+    </script>
+</body>
+</html>

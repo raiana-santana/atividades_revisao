@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Utilizando listas, faça um programa que realize 5 perguntas para uma
+        pessoa sobre um crime, ela deve responder com prompt S - Sim e N - Não.
+        As perguntas são:
+        
+        1 - "Telefonou para a vítima?"
+        2 - "Esteve no local do crime?"
+        3 - "Mora perto da vítima?"
+        4 - "Devia para a vítima?"
+        5 - "Já trabalhou com a vítima?"
+        Ao final, o programa deve emitir uma classificação sobre a participação da
+        pessoa no crime. Se a pessoa responder positivamente a 2 questões, ela
+        deve ser classificada como
+        
+        "Suspeita
+        "
+        ; entre 3 e 4 respostas positivas como
+        
+        "Cúmplice
+        "
+        ; e se responder positivamente a 5 questões, deve ser
+        
+        classificada como
+        
+        "Assassino
+        
+        ". Caso contrário, será classificada como
+        
+        "Inocente
+        ".</p>
+
+        <script>
+            alert("Você está sendo investigado. Responda S para 'sim' e N para 'não'")
+        
+            let perguntas = [
+            "1 - Telefonou para a vítima?",
+            "2 - Esteve no local do crime?",
+            "3 - Mora perto da vítima?",
+            "4 - Devia para a vítima?",
+            "5 - Já trabalhou com a vítima?"
+            ];
+
+            let respostas = []
+            let contadorSim = 0
+
+            for(let pergunta of perguntas){
+                let respostaUsuario = prompt(`${pergunta} (S/N)`)
+                respostas.push(respostaUsuario);
+
+                if(respostaUsuario ==='S'){
+                    contadorSim++
+                }
+            }
+
+            let classificacao
+
+            if(contadorSim===5){
+                classificacao = "Assassino"
+            }else if(contadorSim>=3){
+                classificacao = "Cúmplice"
+            }else if(contadorSim === 2){
+                classificacao = "Suspeito"
+            }else{
+                classificacao = "Inocente"
+            }
+
+            alert(`VOCÊ É ${classificacao}`)
+        </script>
+</body>
+</html>

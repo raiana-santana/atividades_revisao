@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 01 - Condicionais</title>
+</head>
+<body>
+    <h2>Atividade 01</h2>
+    <p> Peça ao usuário para inserir um número e escreva um programa que determine se o número é positivo e par.</p>
+     
+    <label for="meuInput">Insira um número:</label>
+    
+    <input type="number" id="meuInput">
+    <button id="meuBotao">Enviar</button>
+    <div id="mensagem"></div>
+    
+    
+    <script>
+        const botao = document.getElementById('meuBotao')
+
+        botao.addEventListener('click', function(){
+            const input = parseInt(document.getElementById('meuInput').value);
+            const msg = document.getElementById('mensagem');
+
+            if (input % 2 == 0 && input > 0){
+                msg.textContent = "É PAR!!!!!";
+            }
+            else if (input <= 0){
+                msg.textContent = "O número não é positivo";
+            }
+            else{
+                msg.textContent = "é ímpar...";
+            }
+        })
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p name="para"></p>
+    <p name="para"></p>
+
+    <p class="texto"></p>
+    <p id="text"></p>
+
+    <h1></h1>
+    <p class="classeQuery"></p>
+    <p class="classeQuery"></p>
+    <p id="idQuery"></p>
+
+    <script>
+      //pegando um elemento pelo name
+      let paragrafo = document.getElementsByName("para");
+      paragrafo[0].innerText = "oxe";
+      paragrafo[1].innerText = "oiiii";
+
+      //pegando um elemento pelo ID
+      let teste = document.getElementById("text");
+      teste.innerText = "rai";
+
+      //pegando um elemento pelo nome da classe
+      let outroTeste = document.getElementsByClassName("texto");
+      outroTeste[0].innerText = "raposa";
+
+      //querySelector
+      let testeQueryTag = document.querySelector('h1')
+      testeQueryTag.innerText = 'cachorro'
+
+      let testeQueryClass = document.querySelector('.classeQuery')
+      testeQueryClass.innerText = 'gato'
+
+      let testeQueryId = document.querySelector('#idQuery')
+      testeQueryId.innerText = 'fufu'
+    </script>
+  </body>
+</html>

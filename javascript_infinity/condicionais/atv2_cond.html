@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 02</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 20px;
+            gap: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Atividade 02</h2>
+    <p>Crie um programa que solicite ao usuário seu peso (em kg) e altura
+        (em metros) e calcule o IMC. Em seguida, informe a categoria de
+        acordo com a tabela de IMC (por exemplo, abaixo do peso, peso
+        normal, sobrepeso, etc.).</p>
+    
+    <div class="container">
+        <label for="pesoUsuario">Digite o seu peso: </label>
+        <input type="number" id="pesoUsuario">
+
+        <label for="alturaUsuario">Digite a sua altura: </label>
+        <input type="number" id="alturaUsuario">
+
+        <button id="meuBotao">Calcule o seu IMC</button>
+
+        <p id="mensagemIMC"></p>
+    </div>
+    
+
+    <script>
+        const botao = document.getElementById('meuBotao');
+
+        botao.addEventListener('click', function(){
+            const peso = parseFloat(document.getElementById('pesoUsuario').value);
+            const altura = parseFloat(document.getElementById('alturaUsuario').value);
+            const msg = document.getElementById('mensagemIMC');
+
+            const calculoIMC = (peso / altura**2).toFixed(2);
+
+            if (calculoIMC <= 18.5){
+                msg.textContent = `Você está abaixo do peso. Seu IMC é de ${calculoIMC}`
+            }
+            else if (calculoIMC <= 24.9){
+                msg.textContent = `Você está no peso normal. Seu IMC é de ${calculoIMC}`
+            }
+            else if (calculoIMC <= 29.9){
+                msg.textContent = `Você está com sobrepeso. Seu IMC é de ${calculoIMC}`
+            }
+        })
+    </script>
+</body>
+</html>
