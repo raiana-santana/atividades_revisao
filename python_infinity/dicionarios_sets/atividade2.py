@@ -7,9 +7,9 @@ pessoas = [
     {"nome": "Andressa", "idade": 24}
 ]
 
-# for pessoa in pessoas:
-#     print(f"Nome: {pessoa['nome']}, Idade: {pessoa['idade']}")
+for pessoa in pessoas:
+    print(f"Nome: {pessoa['nome']}, Idade: {pessoa['idade']}")
 
 
-for i in range(len(pessoas)):
-    print(f"Nome: {pessoas[i]['nome']}, Idade: {pessoas[i]['idade']}")
+# for i in range(len(pessoas)):
+#     print(f"Nome: {pessoas[i]['nome']}, Idade: {pessoas[i]['idade']}")
