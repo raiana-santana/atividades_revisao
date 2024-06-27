@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p>Escreva uma função que recebe uma lista de números e retorna a soma deles</p>
+
+    <script>
+
+        //criação de uma lista de números
+        let listaNumeros = [2, 5, 3, 9, 11]
+
+        //criação da função que irá somar os números da lista
+        function somarNumeros(listadeNumeros){
+            //variável soma, que irá armazenar o valor da soma de todos os números pertencentes à lista
+            let soma = 0
+
+            //loop que percorre a lista de número
+            for(numero of listadeNumeros){
+                //soma todos os números e armazena na variável soma
+                soma += numero
+            }
+
+            //retorna o valor da soma dos números da lista
+            return soma
+        }
+
+        //chamando a função e armazenando numa variável, para chamar posteriormente. passo a listaNumeros como argumento da minha função
+        let chamadaFuncao = somarNumeros(listaNumeros)
+
+        //defino a saída da função no console.log
+        console.log(chamadaFuncao)
+    </script>
+</body>
+</html>
