@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Crie uma função no JavaScript que irá trocar o texto de um elemento que está em uma lista ul.</p>
+
+    <ul>
+        <li>Obrigada</li>
+        <li id="trocar">Thank you</li>
+        <li>Gracias</li>
+    </ul>
+
+    <button id="botaoTroca">Clique em mim</button>
+
+    <script>
+   
+        let botao = document.querySelector('#botaoTroca')
+        
+        botao.addEventListener('click', () => {
+            let texto = document.querySelector('#trocar')
+            texto.innerHTML = "Merci"
+        })
+    </script>
+</body>
+</html>
